@@ -1,68 +1,92 @@
 
 /* Style sheet
    color picker www.w3schools.com/colors/colors_picker.asp
+   dark - 535C5F
+   grey - 8A8A8A
+   light - DDDAD8
+   blue - 73939C
 */
 
 html {
-    background-color: white;
+    min-height: 100%;
+    background-image: linear-gradient(to right, white, #9e9e9e);
+    background-size: cover;
+    font-family: Helvetica, 'Trebuchet MS', sans-serif;
   }
    
   body {
-    background-color: powderblue;
-    width: 600px;
-    border: 2px solid black;
-    padding: 0px 20px 20px 20px;
-    
+    padding: 10px;
+    text-align: center;
   }
-  
+
+  a {
+    color: #0080ff;
+  }
+
+  a:link, a:visited {
+    text-decoration: none;
+  }
+
+  a:hover, a:active {
+    text-decoration: underline;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    color: #535C5F;
+  }
+
   h1 {
       font-size: 60px;
       text-align: center;
       margin: 0;
       padding: 20px 0;
-      color: #ff00ff;  /* Fuchsia */
-      text-shadow: 3px 3px 1px black;
-  }
-  
-  img {
-    display: block;
-    margin: 0 auto;
-    align: center;
   }
   
   p {
-    color: red;
+    color: 535C5F;
   }
   
   table {
       border: 1px solid black;
-      background-color: #f1f1c1;
+      background-color: #DDDAD8;
   }
   
   /* Defining styling for a specific element type - each question */
   .question {
-    background-color: black;
-    color: white;
-    margin: 20px;
+    text-align: left;
+    color: #535C5F;
     padding: 20px;
+    border-bottom: 2px solid #535C5F;
+  }
+
+  .survey {
+    padding: 40px;
   }
   
   /* Defining styling for a specific element type - large block buttons */
-  .block {
+  #submit_button {
     display: block;
-    width: 100%;
-    border: none;
-    background-color: #ffff66;  /* yellow */
+    width: 50%;
+    border: #535C5F solid 1px;
+    background-color: #DDDAD8;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
+    margin: auto;
+  }
+
+  #submit_button:hover {
+    background-color: #BFEF88;
   }
   
   /* Defining styling for a specific element with an id */
   #signature {
     text-align: right;
-    color: red;
-    font-style: italic;
+    color: black;
     font-size: 75%;
+  }
+
+  #signature_link {
+    color: black;
   }

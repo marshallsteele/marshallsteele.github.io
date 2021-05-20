@@ -1,77 +1,92 @@
-
-<! This little bit of code started with https://www.wikihow.com/Create-a-Questionnaire-in-HTML and got modified, by then using info from w3schools.com to continue.
-
-This is an UGLY survey....  PLEASE MODIFY IT!
-
-Caroline Barrière
-May 2020
-
->
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-	<! IMPORTANT to use a CSS file - external >
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
-    <title>Questionnaire</title>
+    <title>User Interface Survey</title>
   </head>
   
   <body>
-	<h1>Survey</h1>
-	<form id="myform" action="index.php" >
-	<br>
-	<br>
-	<! Choose a website to evaluate >
-	<h3><i>This is a terribly ugly page... please modify it!</i></h3>
-	<h2>What do you think of the UI in this <a href="http://Provigo.ca">Provigo</a> site?</h2>	
-	<br>
-	<br>
-	<! You should make your image clickable>
-	<img src="images/Provigo-FrontPage.JPG" alt="http://Provigo.ca" width="450" height="300">
-	<br>
-	<br>
+	<h1>User Interface Survey</h1>
+	<h2>Please answer the following questions based on the user interface of the website below.</h2>
+	<h2>All questions are based on the <a href="https://www.theweathernetwork.com/" target="_blank" rel="noopener noreferrer">Weather Network</a>'s website.</h2>
+	<a href="https://www.theweathernetwork.com/" target="_blank" rel="noopener noreferrer">
+		<img src="images/WeatherNetworkScreenshot.png" alt="https://www.theweathernetwork.com/" width="50%" height="auto">
+	</a>
+
+	<form class="survey">
 	<div class="question">
-	<h2> Personal Information </h2>
-	<p>First name: <input type="text" name="firstname"></p>
-	<p>Last name: <input type="text" name="lastname"></p>
-	<br>
-	<br>
-		
-	</div>	
-		
+	<h2>Question 1</h2>
+	<h3>Overall, this user interface is:</h3>
+	<input type="radio" name="opinion" value="excellent">Excellent<br>
+	<input type="radio" name="opinion" value="good">Good<br>
+	<input type="radio" name="opinion" value="ok">OK<br>
+	<input type="radio" name="opinion" value="bad">Bad<br>
+	<input type="radio" name="opinion" value="terrible">Terrible<br>
+	</div>
+
+
+
 	<div class="question">
-		<h2> What you like </h2>
-		I like:<br>
-		<input type="checkbox" name="Color" value="Red">Red<br>
-		<input type="checkbox" name="Color" value="Green">Green<br>
-		<input type="checkbox" name="Color" value="Blue">Blue<br>
-		
-		<br>
-		
-		What is your favorite fruit?<br>
-		<select id="favorite">
-			<option value="Apples" selected="selected">Apples</option>
-			<option value="Oranges">Oranges</option>
-			<option value="Bananas">Bananas</option>
+		<h2>Question 2</h2>
+		<h3>How many clicks does it take to get the weather forecast for your area?</h3>
+		<select name="num_clicks">
+			<option	value="unanswered" selected="selected">Please select a number</option>
+			<option	value="0">0</option>
+			<option	value="1">1</option>
+			<option	value="2">2</option>
+			<option	value="3">3</option>
+			<option	value="4">4</option>
+			<option	value="5">5</option>
+			<option	value="6+">6 or more</option>
 		</select>
 	</div>
+
+
+
+	<div class="question">
+		<h2>Question 3</h2>
+		<h3>Which of the following user interface aspects improve your productivity when using this site? (select all that apply)</h3>
+		<input type="checkbox" name="improving_element" value="hamburger_menu">Hamburger Menu<br>
+		<input type="checkbox" name="improving_element" value="button_styles">Button Styles<br>
+		<input type="checkbox" name="improving_element" value="font_choice">Font Choice<br>
+		<input type="checkbox" name="improving_element" value="colour_scheme">Colour Scheme<br>
+		<input type="checkbox" name="improving_element" value="content_layout">Content Layout<br>
+	</div>
+
+
+
+	<div class="question">
+		<h2>Question 4</h2>
+		<h3>Please enter the name of another weather source you use.</h3>
+		<input type="text" name="weather_provider">
+	</div>
+
+
+
+	<div class="question">
+		<h2>Question 5</h2>
+		<h3>Now that you have navigated the Weather Network website, would you consider using it again?</h3>
+		<input type="radio" name="adopt_twn" selected="selected">Yes</input><br>
+		<input type="radio" name="adopt_twn">No</input><br>
+		<input type="radio" name="adopt_twn">Undecided</input><br>
+	</div>
+
+
+		
+	<h3>Thank you for completing the survey!</h3>
+	<h3>If you have any additional comments, please enter them below:</h3>
+	<textarea rows="3" cols="40"></textarea>
 	
 	<br>
 	<br>
-		
-	Comments:<br>
-	<textarea rows="5" cols="30"></textarea>
-			
-	<br>
-	<br>
-			
-	<button id="submitButton" type="button" class="block">
-		SUBMIT your questionnaire
+	
+	<button id="submit_button" type="button">
+		SUBMIT
 	</button>
 		
-	<p id="signature">Site created by Caroline Barrière</p>	
-	
 	</form>
+	<p id="signature">Site created and designed by Athos</p>
+	<p id="signature">Click <a id=signature_link href="https://marshallsteele.github.io/" target="_blank" rel="noopener noreferrer">here</a> for more websites created by Athos</p>	
   </body>
 </html> 
