@@ -4,6 +4,10 @@
 
 function openInfo(evt, tabName) {
 
+    if (tabName == "Products") {
+        populateListProductChoices('displayProduct')
+    }
+
 	// Get all elements with class="tabcontent" and hide them
 	tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
@@ -25,40 +29,47 @@ function openInfo(evt, tabName) {
 
 	
 // generate a checkbox list from a list of products
-// it makes each product name as the label for the checkbos
+// it makes each product name as the label for the checkbox
 
-function populateListProductChoices(slct1, slct2) {
-    var s1 = document.getElementById(slct1);
+function populateListProductChoices(slct2) {
+    var s1 = document.getElementsByName('restriction');
     var s2 = document.getElementById(slct2);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
+    var optionArray = restrictListProducts(products, s1);
 
-	// for each item in the array, create a checkbox element, each containing information such as:
-	// <input type="checkbox" name="product" value="Bread">
-	// <label for="Bread">Bread/label><br>
+	// for each item in the array, create a checkbox element, each containing information:
+    //<label class="checkbox_container">Bread: $2.99
+    //<input type="checkbox" name="product" value="Bread">
+    //<span class="checkmark"></span>
+    //</label>
 		
 	for (i = 0; i < optionArray.length; i++) {
 			
-		var productName = optionArray[i];
+		var productName = optionArray[i].name;
+        var productPrice = optionArray[i].price;
 		// create the checkbox and add in HTML DOM
+        var label = document.createElement('label')
+		label.className = "checkbox_container"
+		label.appendChild(document.createTextNode(productName + ": $" + productPrice.toString()));
+
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		s2.appendChild(checkbox);
-		
-		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.appendChild(checkbox);
+
+        var span = document.createElement("span");
+        span.className = "checkmark";
+        label.appendChild(span);
+
+        // add checkbox entry to HTML DOM
 		s2.appendChild(label);
-		
-		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));    
+
+        s2.appendChild(document.createElement("br"));
 	}
 }
 	
@@ -88,6 +99,6 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts).toFixed(2)));
 		
 }
