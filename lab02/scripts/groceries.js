@@ -103,7 +103,7 @@ function restrictListProducts(prods, restrictions) {
     }
     // sort products ascending price
     // code inspired by https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
-    products_restricted.sort((a, b) => (a.price < b.price) ? 1 : -1)
+    products_restricted.sort((a, b) => (a.price > b.price) ? 1 : -1)
 
 	return products_restricted;
 }
