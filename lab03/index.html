@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="../styles/style.css" rel="stylesheet" type="text/css">
+  <!-- Icons from font awesome: https://fontawesome.com/-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <title>Athos Food</title>
+</head>
+
+<body onload="openInfo('Client')">
+  <div class="site_wrapper">
+    <p class="store_title">Athos Food</p>
+
+    <div class="wizard center">
+      <button class="tablinks" id="client_tab" >Profile</button>
+      <button class="tablinks" id="products_tab" >Products</button>
+      <button class="tablinks" id="cart_tab" >Cart</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Client" class="tabrow">
+      <div class="nav_button column"></div>
+      <div class="center_content column">
+        <p class="tab_header">My Profile:</p>
+        <form class="default_form">
+          <p class="section_header">Preferences</p>
+          <label class="switch">
+              <input type="checkbox" name="restriction" value="organic_only">
+              <span class="slider round"></span>
+          </label>  Show me only organic products<br>
+          <p class="section_header">Dietary Restrictions:</p>
+          <p class="extra_info">select all that apply</p>
+          <label class="checkbox_container_v2">Lactose Intolerant
+              <input type="checkbox" name="restriction" value="lactose_intolerant">
+              <span class="checkmark"></span>
+          </label><br>
+          <label class="checkbox_container_v2">Nut Allergy
+              <input type="checkbox" name="restriction" value="nut_allergy">
+              <span class="checkmark"></span>
+          </label><br>
+        </form>
+        <button type="button" class="update_cart_button" onclick="openInfo('Products')">
+          <i class="far fa-eye"></i>
+          Show Me Some Products
+        </button>
+      </div>
+      <div class="nav_button column clickable" onclick="openInfo('Products')"><i class="arrow right"></i></div>
+    </div>
+
+    <div id="Products" class="tabrow">
+      <div class="nav_button column clickable" onclick="openInfo('Client')"><i class="arrow left"></i></div>
+      <div class="center_content column">
+        <p class="tab_header">Products For You:</p>
+        <div id="displayProduct"></div>
+        <button id="addCart" type="button" class="update_cart_button" onclick="selectedItems()">
+          <i class="fas fa-clipboard-check"></i>
+          Update My Cart With Selected Items
+        </button>
+      </div>
+      <div class="nav_button column clickable" onclick="selectedItems()"><i class="arrow right"></i></div>
+    </div>
+
+    <div id="Cart" class="tabrow">
+      <div class="nav_button column clickable" onclick="openInfo('Products')"><i class="arrow left"></i></div>
+      <div class="center_content column">
+        <p class="tab_header">My Cart Includes:</p>
+        <div id="displayCart"></div>
+        <label class="switch">
+          <input type="checkbox" name="delivery" value="delivery">
+          <span class="slider round"></span>
+        </label>  I want my order delivered.<br>
+        <button type="button" class="update_cart_button" onclick="orderPlaced()">
+          <i class="fas fa-shopping-cart"></i>
+          Place Order
+        </button>
+        <div id="snackbar">Your order has been placed.<br> Thank you for shopping with Athos Foods.</div>
+      </div>
+      <div class="nav_button column"></div>
+    </div>
+
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+    
+  </div>
+  <div class="footer">
+    <p id="signature_v2">Site created and designed by Athos</p>
+    <p id="signature_v2">Click <a id=signature_link_v2 href="https://marshallsteele.github.io/" target="_blank" rel="noopener noreferrer">here</a> for more websites created by Athos</p>	
+  </div>
+
+</body>
+</html>
