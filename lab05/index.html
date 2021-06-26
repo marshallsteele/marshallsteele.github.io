@@ -1,0 +1,441 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+-->
+
+<!-- Here are the sources for the images used on this website for educational puposes
+https://reductress.com/post/how-i-went-from-being-a-horse-girl-to-a-tall-dog-woman/
+https://unsplash.com/s/photos/man-and-dog
+https://www.westend61.de/en/imageView/KIJF03611/smiling-woman-carrying-dog-at-home
+https://pawp.com/should-i-get-my-dog-vaccinated-is-dog-vaccination-safe-yes/
+https://www.24petwatch.com/newsletter/pet-microchip-registry-how-to-easily-register-your-chip
+https://www.baxterboo.com/fun/a.cfm/save-your-cat-from-cone-shame/
+https://figopetinsurance.com/blog/first-time-cat-owners-tips-taking-your-cat-vet
+https://www.esaote.com/en-CA/veterinary-systems-and-applications/
+https://www.creditkarma.com/advice/i/options-huge-vet-bill
+https://www.southwestjournal.com/voices/ask-the-veterinarian/2020/08/why-is-it-so-hard-to-get-an-appointment-with-your-vet-right-now/
+http://www.vetstreet.com/our-pet-experts/take-the-stress-out-of-trimming-your-dogs-nails
+
+-->
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icons from font awesome: https://fontawesome.com/-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- JQuery and JQuery UI -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Custom CSS -->
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <!-- Custom Javascript -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/service.js"></script>
+
+    <title>Athos Veterinary</title>
+</head>
+<body>
+<div class = "container-fluid">
+  <!--
+  NAVBAR
+  https://getbootstrap.com/docs/5.0/components/navbar/
+  -->
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="border-bottom: lightgray solid 1px">
+      <div class="container-fluid">
+          <a class="navbar-brand fs-2 text-success" href="#">Athos Veterinary</a>
+          <p class="fw-light"></p>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <a class="nav-link fs-3" aria-current="page" href="#home" style="border-right: solid lightgray 1px;border-left: solid lightgray 1px;">Home  </a>
+                  <a class="nav-link fs-3" href="#our-services" style="border-right: solid lightgray 1px;">Our Services  </a>
+                  <a class="nav-link fs-3" href="#meet-the-team" style="border-right: solid lightgray 1px;">Meet The Team  </a>
+                  <a class="nav-link fs-3" href="#book-an-appointment" style="border-right: solid lightgray 1px;">Book An Appointment  </a>
+              </div>
+              <span class="navbar-text text-success">123 Shadow St. Ottawa, On.</span>
+          </div>
+      </div>
+  </nav>
+  
+
+  <!--
+  About Us
+  -->
+
+  <div id="home" class="carousel carousel-dark slide" data-bs-ride="carousel" style="padding-top: 70px;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#home" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/slide2.jpg" class="d-block w-100" alt="Vet checking dog" style="height: 50vh;">
+        <div class="carousel-caption d-block" style="background-color: rgba(245, 245, 245, 0.6);">
+          <h3>Welcome to Athos Veterinary</h3>
+          <h6>A small town veterinary service in the heart of the big city.</h6>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slide3.jpg" class="d-block w-100" alt="Vet inspecting ear of dog" style="height: 50vh;">
+        <div class="carousel-caption d-block" style="background-color: rgba(245, 245, 245, 0.6);">
+          <h3>Our Mission</h3>
+          <h6>We aim to provide high quality veterinary services at a fraction of the price.</h6>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slide1.jpeg" class="d-block w-100" alt="Different breeds of dogs together" style="height: 50vh;">
+        <div class="carousel-caption d-block" style="background-color: rgba(245, 245, 245, 0.6);">
+          <h3>Come Join The Family</h3>
+          <h6>Book an appointment below or stop by 123 Shadow St. Ottawa to review our services.</h6>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container-fluid text-center p-3">
+    <button type="button" class="btn btn-lg btn-outline-success" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now!</button>
+  </div>
+
+  <!--
+  Our Services
+  -->
+  <div id="our-services">
+    <div class="row justify-content-between header-container">
+      <div class="col-4">
+        <h1>Our Services</h1>
+      </div>
+      <div class="col-4 text-end">
+        <h1 class="text-success"><i class="fas fa-list-ul"></i></h1>
+      </div>
+    </div>
+    <span class="header-underline"></span>
+    <br>
+    <div class="row justify-content-around" style="padding-bottom: 10px">
+      <div class="col-lg-2">
+        <div class="card text-center hoverable-card" onClick="setDescription('nail')">
+          <div class="card-body">
+            <img src="images/nail.jpg" class="card-img-top" alt="Dog having nails trimmed" style="object-fit: cover;">
+            <h2 class="text-success"><i class="fas fa-paw"></i></h2>
+            <h5 class="card-title"></i>Nail Trimming</i></h5>
+            <p class="card-text">
+              $20.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card text-center hoverable-card" onClick="setDescription('consult')">
+          <div class="card-body">
+            <img src="images/consult.jpg" class="card-img-top" alt="Cat being examined" style="object-fit: cover;">
+            <h2 class="text-success"><i class="fas fa-stethoscope"></i></h2>
+            <h5 class="card-title">Pet Consult</h5>
+            <p class="card-text">
+              $40.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card text-center hoverable-card" onClick="setDescription('spay')">
+          <div class="card-body">
+            <img src="images/spay.jpg" class="card-img-top" alt="Cat with protective cone on head" style="object-fit: cover;">
+            <h2 class="text-success"><i class="fas fa-cut"></i></h2>
+            <h5 class="card-title">Spay/Neuter</h5>
+            <p class="card-text">
+              $120.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card text-center hoverable-card" onClick="setDescription('microchip')">
+          <div class="card-body">
+            <img src="images/microchip.jpg" class="card-img-top" alt="Dog recieving microchipping injection" style="object-fit: cover;">
+            <h2 class="text-success"><i class="fas fa-microchip"></i></h2>
+            <h5 class="card-title">Microchipping</h5>
+            <p class="card-text">
+              $24.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card text-center hoverable-card" onClick="setDescription('shots')">
+          <div class="card-body">
+            <img src="images/shots.jpg" class="card-img-top" alt="Dog recieving fluid injection" style="object-fit: cover;">
+            <h2 class="text-success"><i class="fas fa-syringe"></i></h2>
+            <h5 class="card-title">Shots</h5>
+            <p class="card-text">
+              $210.00
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid text-center">
+      <h2 id="service_desc_header" style="font-style: italic;">Select a Service to Learn More</h2>
+      <h4 id="service_desc_price"></h4>
+      <p id="service_desc_content"></p>
+    </div>
+  </div>
+
+  <!--
+  Meet The Team
+  -->
+
+  <div id="meet-the-team">
+    <div class="row justify-content-between header-container">
+      <div class="col-4">
+        <h1>Meet The Team</h1>
+      </div>
+      <div class="col-4 text-end">
+        <h1 class="text-success"><i class="fas fa-users"></i></h1>
+      </div>
+    </div>
+    <span class="header-underline"></span>
+    <br>
+    <div class="row justify-content-around" style="padding-bottom: 10px">
+      <div class="col-sm-3">
+        <div class="card text-left">
+          <img src="images/jennifer.jpg" class="card-img-top rounded-circle" alt="Dr. Prada holding her dog" style="object-fit: cover; padding: 10px; height: auto">
+          <h5 class="card-title text-center">Dr. Jennifer Prada, DVM</h5>
+          <div class="card-body text-secondary">
+            <h5 class="card-title text-center">& Brittany</h5>
+            <p class="card-text">
+              Having graduated from the Ontario Veterinary College at the University of Guelph and completed
+              5 years of training throughout Ontario, Jennifer joined our team in 2019. Jennifer was raised on the family
+              farm and her love for animals grew from there. In her free time, she enjoys cycling and baking homemade
+              bread.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card text-left">
+          <img src="images/ryan.jpg" class="card-img-top rounded-circle" alt="Dr. Prada holding her dog" style="object-fit: cover; padding: 10px; height: auto">
+          <h5 class="card-title text-center">Ryan, RVT</h5>
+          <div class="card-body text-secondary">
+            <h5 class="card-title text-center">& Beans</h5>
+            <p class="card-text">
+              Ryan has worked as a registered veterinary technician for 10 years across Canada. He graduated from 
+              Dalhousie University in Nova Scotia in 2010 and joined the Athos Veterinary team in 2014. When not working,
+              Ryan loves to play baseball and go snowboarding with friends.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card text-left">
+          <img src="images/rachel.jpg" class="card-img-top rounded-circle" alt="Dr. Prada holding her dog" style="object-fit: cover; padding: 10px; height: auto">
+          <h5 class="card-title text-center">Rachel, VA</h5>
+          <div class="card-body text-secondary">
+            <h5 class="card-title text-center">& Rucker</h5>
+            <p class="card-text">
+              Rachel, our newest addition to the team, recieved her veterinary assistant certificate form
+              Algonquin College in 2020. Rachel volunteered with Athos Veterinary throughout her program. 
+              Her passion for animals extends to her home life, as she loves taking care of her dog Rucker
+              and her two horses, Lady and Fancy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  Book An Appointment
+  -->
+
+  <div id="book-an-appointment">
+    <div class="row justify-content-between header-container">
+      <div class="col-4">
+        <h1>Book An Appointment Online</h1>
+      </div>
+      <div class="col-4 text-end">
+        <h6></h9>
+      </div>
+    </div>
+    <span class="header-underline"></span>
+    <br>
+    <div class="d-grid p-5">
+      <button type="button" class="btn btn-lg btn-outline-success" data-bs-toggle="modal" data-bs-target="#bookingModal">Book An Appointment</button>
+    </div>
+
+  <!--
+  Book An Appointment Modal
+  -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true" class="position-relative">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="bookingModalLabel">Book An Appointment</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid border rounded">
+              <form style="padding: 10px;">
+                <h5>Your Appointment</h5>
+                <div class="form-group row">
+                  <div class="form-group col-md-6">
+                    <label for="inputPetType">Pet Type</label>
+                    <input type="text" class="form-control" id="inputPetType" placeholder="Pet Type">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPetName">Pet Name</label>
+                    <input type="text" class="form-control" id="inputPetName" placeholder="Pet Name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="form-group col-md-6">
+                    <label for="inputService">Service</label>
+                    <select id="inputService" class="form-control">
+                      <option selected style="color: gray;">Select a Service</option>
+                      <option>Pet Consult</option>
+                      <option>Nail Trimming</option>
+                      <option>Spay/Neuter</option>
+                      <option>Microchipping</option>
+                      <option>Shots</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputExpert">Expert</label>
+                    <select id="inputExpert" class="form-control">
+                      <option selected style="color: gray;">Select Expert Preference</option>
+                      <option>Dr. Jennifer Prada, DVM</option>
+                      <option>Ryan, RVT</option>
+                      <option>Rachel, VA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="form-group col-md-6">
+                    <label for="inputDate">Date <i class="far fa-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Some days may be unavailable due to open hours and expert availablility."></i></label>
+                    <input type="text" id="dateInput" class="form-control">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputTime">Time</label>
+                    <input type="time" class="form-control" id="inputTime">
+                  </div>
+                </div>
+                <br>
+                <h5>About You</h5>
+                <div class="form-group row">
+                  <div class="form-group col-md-6">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPhoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="inputPhoneNumber" placeholder="(XXX) XXX-XXXX">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCreditCard">Credit Card Number <i class="far fa-question-circle"  data-bs-toggle="tooltip" data-bs-placement="top" title="Your card will only be charged if you cancel your appointment within 24hrs or your boooked time."></i></label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control" id="inputCreditCard" placeholder="XXXX XXXX XXXX XXXX">
+                  </div>
+                  <div class="col-md-5 text-end">
+                    <h1 style="padding:0px; margin:0px"><i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i></h3>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-success" onclick="bookAppointment()">Book Appointment</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+
+            <!-- Error Toasts: -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+        
+              <div class="toast-container position-absolute top-0 end-0 p-3">
+            
+                <div id="requiredFieldToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+                  <div class="toast-header text-danger">
+                    <strong class="me-auto">All Fields Must Be Filled Out</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    Please enter a valid value for fields in red.
+                  </div>
+                </div>
+                <div id="phoneToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+                  <div class="toast-header text-danger">
+                    <strong class="me-auto">Incorrect Phone Number Format</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    Inteded Use: (613) 123-4567
+                  </div>
+                </div>
+                <div id="creditCardToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+                  <div class="toast-header text-danger">
+                    <strong class="me-auto">Incorrect Credit Card Number Format</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    Inteded Use: 1234 5678 9012 3456
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    </div>
+  </div>
+</div>
+
+<br>
+
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      This website was designed and created by Athos.<br>
+      For more websites by Athos, visit:
+      <a class="text-dark" href="https://marshallsteele.github.io/">marshallsteele.github.io/</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<!-- here we initialize popper tooltips and bootstrap toasts -->
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  var toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl)
+  })
+</script>
+</body>
+</html>
