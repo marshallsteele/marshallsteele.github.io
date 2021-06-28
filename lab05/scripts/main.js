@@ -2,9 +2,13 @@ function bookAppointment() {
     var modalEl = document.getElementById('bookingModal');
     var modal = bootstrap.Modal.getInstance(modalEl);
 
+    var expert = $("#inputExpert option:selected").text();
+    var date = $("#dateInput").datepicker().val();
+    var petName = $("#inputPetName").val();
+
     if (validateForm()) {
         modal.hide();
-        alert("Your appointment has been booked. Thank you for chosing Athos Veterinary!");
+        alert("Your appointment for " + petName + " with " + expert + " for " + date + " has been booked. Thank you for chosing Athos Veterinary!");
     } else {
         alert("All fields must be completed before booking an appointment. Please complete the form before submitting.");
     }
@@ -210,7 +214,7 @@ $(document).ready(function(){
     $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
+            // no calendar before July 27th 2020
             minDate: new Date('06/27/2021'),
             maxDate: '+4M',
             // used to disable some dates
