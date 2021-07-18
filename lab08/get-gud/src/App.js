@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import NavBar from './Components/NavBar';
+import Home from './Components/Home';
+import Boosters from './Components/Boosters';
+import Guides from './Components/Guides';
+import Help from './Components/Help';
+import Footer from './Components/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
+import background from "./images/background-2.jpg"
+import { useState } from 'react';
+
 function App() {
+
+  const [ currentLanguage, setCurrentLanguage ] = useState("eng")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ backgroundImage: `url(${background})`}} className="App">
+        <NavBar language={currentLanguage}></NavBar>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/boosters">
+            <Boosters />
+          </Route>
+          <Route path="/guides">
+            <Guides />
+          </Route>
+          <Route path="/help">
+            <Help language={currentLanguage} />
+          </Route>
+        </Switch>
+        <Footer language={currentLanguage} setLanguage={setCurrentLanguage}></Footer>
+      </div>
+    </Router>
   );
 }
 
